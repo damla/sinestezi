@@ -1,12 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
-
-const config = {
-  initialColorMode: "light",
-  useSystemColorMode: false,
-};
-
-export const theme = extendTheme({ config });
+import theme from "../utils/theme";
 
 function MyApp({ Component, pageProps }) {
   return (

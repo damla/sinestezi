@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Stack, useColorMode } from "@chakra-ui/react";
+import { Button, useColorMode } from "@chakra-ui/react";
 
 export default function IndexPage() {
   const { colorMode, toggleColorMode } = useColorMode();
