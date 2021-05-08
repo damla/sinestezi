@@ -6,7 +6,7 @@ const config = {
   useSystemColorMode: false,
 };
 
-const theme = extendTheme({ config })
+export const theme = extendTheme({ config });
 
 function MyApp({ Component, pageProps }) {
   return (
