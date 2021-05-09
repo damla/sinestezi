@@ -1,6 +1,6 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Result from "../components/result";
+import Header from "../components/header/header.component"
+import Footer from "../components/footer/footer.component";
+import Result from "../components/result/result.component";
 
 import { Flex } from "@chakra-ui/react";
 

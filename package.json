@@ -13,8 +13,8 @@
     "@emotion/react": "11.4.0",
     "@emotion/styled": "11.3.0",
     "framer-motion": "4.1.13",
-    "next": "latest",
-    "react": "^16.13.1",
+    "next": "10.0.7",
+    "react": "^17.0.1",
     "react-dom": "^16.13.1",
     "swr": "^0.5.6"
   },
