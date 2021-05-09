@@ -1,24 +1,33 @@
 import { Button, useColorMode } from "@chakra-ui/react";
-import useSWR from 'swr'
+import React, { useState } from 'react';
+import { useQuestion } from '../hooks/useQuestion'
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+
 
 export default function IndexPage() {
+  const [ id, setId ] = useState(1);
+
   const { colorMode, toggleColorMode } = useColorMode();
+  const { question, isLoading, isError } = useQuestion(id);
 
-  const { data, error } = useSWR('/api/question', fetcher)
-
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  if (isLoading) return <div>loading...</div>
+  if (isError) return <div>failed to load</div>
 
   return (
   <>
-    <header>
-    </header>
     <Button onClick={toggleColorMode}>
       Toggle {colorMode === "light" ? "Dark" : "Light"}
     </Button>
-    <div>hello {data[0].id}!</div>
+
+    <Button onClick={() => setId(id - 1)}>
+      Prev
+    </Button>
+    <Button onClick={() => setId(id + 1)}>
+      Next
+    </Button>
+
+    <div>{question.title}!</div>
+    <div>{question.content}!</div>
   </>
   );
 }
