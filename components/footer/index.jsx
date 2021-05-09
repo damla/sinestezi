@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 
-export default function Header() {
+export default function Footer() {
   return (
     <Flex as="footer" align="center" justify="center" w="100%">
       <Box
