@@ -1,7 +1,7 @@
 import { Flex, Container, Button, Spacer, HStack } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useState } from "react";
-import Question from "./question";
+import Question from "./question/question.component";
 
 export default function Quiz() {
   return (

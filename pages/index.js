@@ -2,9 +2,9 @@ import { Button, useColorMode, Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useQuestion } from "../hooks/useQuestion";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Quiz from "../components/quiz";
+import Header from "../components/header/header.component";
+import Footer from "../components/footer/footer.component";
+import Quiz from "../components/quiz/quiz.component";
 
 export default function IndexPage() {
   const [id, setId] = useState(1);
