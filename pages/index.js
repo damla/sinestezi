@@ -9,15 +9,14 @@ import Quiz from "../components/quiz/quiz.component"
 import { questions } from '../data'
 
 export async function getStaticProps() {
-  const id = 1
-  const question = questions[id]
-  return { props: { id, question } }
+  return { props: { questions } }
 }
 
 export default function IndexPage(props) {
-  const [id, setId] = useState(props.id);
+  const [id, setId] = useState(0);
 
-  const { question, isLoading, isError } = useQuestion(id);
+  const initialData = props.questions[0]
+  const { question, isLoading, isError } = useQuestion(id, { initialData } );
 
   if (isLoading) return <div>loading...</div>;
   if (isError) return <div>failed to load</div>;
@@ -33,8 +32,7 @@ export default function IndexPage(props) {
       <Button onClick={() => setId(id - 1)}>Prev</Button>
       <Button onClick={() => setId(id + 1)}>Next</Button>
 
-      <div>{question.title}!</div>
-      <div>{question.content}!</div>
+      <div>{ question.title }!</div>
     </>
   );
 }
