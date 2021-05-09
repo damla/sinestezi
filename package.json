@@ -15,7 +15,8 @@
     "framer-motion": "4.1.13",
     "next": "latest",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "swr": "^0.5.6"
   },
   "license": "MIT",
   "keywords": [
