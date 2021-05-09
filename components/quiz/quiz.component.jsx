@@ -1,10 +1,20 @@
-import { Flex, Container, Button, Spacer, HStack } from "@chakra-ui/react";
+import {
+  Button,
+  Spacer,
+  HStack,
+  Stack,
+  useMediaQuery,
+  ButtonGroup,
+  Flex,
+  StackDivider,
+} from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
-import { useState } from "react";
 import Question from "./question/question.component";
 
 export default function Quiz() {
-  return (
+  let isMobile = useMediaQuery("(max-width: 700px)");
+
+  const desktopQuiz = (
     <HStack spacing="6">
       <Spacer></Spacer>
       <Button
@@ -31,4 +41,35 @@ export default function Quiz() {
       <Spacer></Spacer>
     </HStack>
   );
+
+  const mobileQuiz = (
+    <Stack
+      direction="column"
+      spacing="12"
+      align="center"
+      justify="center"
+      divider={<StackDivider borderColor="gray.200" />}
+    >
+      <Question></Question>
+      <Flex
+        w="100%"
+        direction="row"
+        spacing="6"
+        align="center"
+        justify="space-around"
+      >
+        <Spacer />
+        <Button variant="outline" size="lg" boxShadow="lg" p="4">
+          <ArrowBackIcon></ArrowBackIcon> &nbsp; Önceki
+        </Button>
+        <Spacer></Spacer>
+        <Button variant="outline" size="lg" boxShadow="lg" p="4">
+          Sonraki &nbsp; <ArrowForwardIcon></ArrowForwardIcon>
+        </Button>
+        <Spacer></Spacer>
+      </Flex>
+    </Stack>
+  );
+
+  return isMobile[0] ? mobileQuiz : desktopQuiz;
 }
