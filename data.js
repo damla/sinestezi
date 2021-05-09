@@ -1,14 +1,18 @@
 export const questions = [
     {
-      qid: '1',
+      qid: '0',
       title: ' harfi hangi renktir?'
+    },
+    {
+      qid: '1',
+      title: ' sesi hangi renktir?'
     }
       // Diğer soru çeşitleri sonradan eklenecek.
 ]
 
 export const colors = [
   {
-    cid: 1,
+    cid: '0',
     emoji: '🔴',
     color: 'red',
     hex: '#E53E3E', // red 500
@@ -17,7 +21,7 @@ export const colors = [
     ]
   },
   {
-    cid: 2,
+    cid: '1',
     emoji: '🔵',
     color: 'blue',
     hex: '#3182CE', // blue 500
@@ -26,7 +30,7 @@ export const colors = [
     ]
   },
   {
-    cid: 3,
+    cid: '2',
     emoji: '🟢',
     color: 'green',
     hex: '#38A169', // green 500
@@ -35,7 +39,7 @@ export const colors = [
     ]
   },
   {
-    cid: 4,
+    cid: '3',
     emoji: '🟡',
     color: 'yellow',
     hex: '#FAF089', // yellow 200
@@ -44,7 +48,7 @@ export const colors = [
     ]
   },
   {
-    cid: 5,
+    cid: '4',
     emoji: '🟠',
     color: 'orange',
     hex: '#F6AD55', // orange 300
@@ -53,7 +57,7 @@ export const colors = [
     ]
   },
   {
-    cid: 6,
+    cid: '5',
     emoji: '🟣',
     color: 'purple',
     hex: '#805AD5', // purple 500
@@ -62,7 +66,7 @@ export const colors = [
     ]
   },
   {
-    cid: 7,
+    cid: '6',
     emoji: '⚪️',
     color: 'white',
     hex: '#FFFFFF',
@@ -71,7 +75,7 @@ export const colors = [
     ]
   },
   {
-    cid: 8,
+    cid: '7',
     emoji: '⚫️',
     color: 'black',
     hex: '#000000',
