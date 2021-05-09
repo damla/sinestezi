@@ -1,17 +1,16 @@
-import { Button, Flex } from "@chakra-ui/react"
-import React, { useState } from "react"
-import { useQuestion } from "../hooks/useQuestion"
+import { Button, Flex } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { useQuestion } from "../hooks/useQuestion";
 
-import Header from "../components/header/header.component"
-import Footer from "../components/footer/footer.component"
-import Quiz from "../components/quiz/quiz.component"
+import Quiz from "../components/quiz/quiz.component";
 
-import { questions } from '../data'
+import { questions } from "../data";
+import Layout from "../components/layout/layout.component";
 
 export async function getStaticProps() {
-  const id = 1
-  const question = questions[id]
-  return { props: { id, question } }
+  const id = 1;
+  const question = questions[id];
+  return { props: { id, question } };
 }
 
 export default function IndexPage(props) {
@@ -24,11 +23,9 @@ export default function IndexPage(props) {
 
   return (
     <>
-      <Flex direction="column" justify="space-between" h="100vh">
-        <Header />
+      <Layout>
         <Quiz></Quiz>
-        <Footer />
-      </Flex>
+      </Layout>
 
       <Button onClick={() => setId(id - 1)}>Prev</Button>
       <Button onClick={() => setId(id + 1)}>Next</Button>
