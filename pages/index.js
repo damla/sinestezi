@@ -2,8 +2,6 @@ import { Button, useColorMode } from "@chakra-ui/react";
 import React, { useState } from 'react';
 import { useQuestion } from '../hooks/useQuestion'
 
-
-
 export default function IndexPage() {
   const [ id, setId ] = useState(1);
 
