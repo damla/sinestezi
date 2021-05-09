@@ -1,13 +1,21 @@
-import { Button, useColorMode, Flex } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { useQuestion } from "../hooks/useQuestion";
+import { Button, Flex } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { useQuestion } from "../hooks/useQuestion"
 
-import Header from "../components/header/header.component";
-import Footer from "../components/footer/footer.component";
-import Quiz from "../components/quiz/quiz.component";
+import Header from "../components/header/header.component"
+import Footer from "../components/footer/footer.component"
+import Quiz from "../components/quiz/quiz.component"
 
-export default function IndexPage() {
-  const [id, setId] = useState(1);
+import { questions } from '../data'
+
+export async function getStaticProps() {
+  const id = 1
+  const question = questions[id]
+  return { props: { id, question } }
+}
+
+export default function IndexPage(props) {
+  const [id, setId] = useState(props.id);
 
   const { question, isLoading, isError } = useQuestion(id);
 
@@ -30,4 +38,3 @@ export default function IndexPage() {
     </>
   );
 }
-
