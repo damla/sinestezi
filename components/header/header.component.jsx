@@ -6,7 +6,7 @@ import {
   Button,
   useColorMode,
 } from "@chakra-ui/react";
-import Link from "next/Link";
+import Link from "next/link";
 
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -15,7 +15,7 @@ export default function Header() {
     <Flex bg="tomato" p="2" pl="4" pr="4">
       <Box p="2">
         <Heading size="md" color="white">
-        test
+        <Link href="/">Sinestezi</Link>
         </Heading>
       </Box>
       <Spacer />
