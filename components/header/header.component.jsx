@@ -26,7 +26,7 @@ export default function Header() {
           {colorMode === "dark" ? "☀" : "🌙"}
         </Button>
         <Button mr="4">
-          <Link href="/result">Sonuçları Gör</Link>
+          {/* <Link href="/result">Sonuçları Gör</Link> */}
         </Button>
         <Button>Sinestezi Nedir?</Button>
       </Box>
